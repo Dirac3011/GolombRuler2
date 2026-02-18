@@ -1,20 +1,13 @@
-﻿# GolombRuler3
+﻿# GolombRuler-2
 
 # B2-Sequence Finder (Generalized Sidon Sets)
 
 An optimized C++ solver designed to find the minimum span ($\alpha$) for a set of $N$ integers where no pairwise difference occurs more than twice ($\gamma = 2$). 
 
-## Key Features
-
-* **Branch & Bound Search:** Employs a pre-computed lower-bound pruning table (`g_min_span`) to eliminate impossible mathematical paths early. This reduces the search space by orders of magnitude.
-* **128-bit Bitmasking:** Replaces slow vector/set lookups with bitwise logic using `__uint128_t`. Difference conflict detection is handled via single CPU instructions.
-* **Exhaustive Verification:** Unlike greedy or heuristic approaches, this algorithm proves the absolute minimum $\alpha$ by exhaustively searching and pruning the state space.
-* **Top-Level Progress Monitoring:** Tracks and displays the exploration of top-level branches (the second element of the set) to provide real-time feedback during deep computations.
-
 ## Technical Breakdown
 
 ### The Pruning Logic
-The algorithm uses a "Crystal Ball" approach. At any given depth, it calculates the minimum possible distance required to place the remaining $N - k$ elements. 
+The algorithm at any given depth calculates the minimum possible distance required to place the remaining $N - k$ elements. 
 
 If the current value plus this minimum distance exceeds the best $\alpha$ found so far, the entire branch is killed instantly:
 `if (last_val + min_span_remaining >= g_best_alpha) return;`
@@ -28,5 +21,4 @@ If a new candidate number generates a difference already present in `seen_twice`
 
 ## Compilation
 For maximum performance, always compile with the `-O3` flag:
-```bash
-g++ -O3 -o b2_solver main.cpp
+
