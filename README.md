@@ -23,12 +23,13 @@ If a new candidate number generates a difference already present in `seen_twice`
 For maximum performance, always compile with the `-O3` flag:
 
 ## Results
-0, 1, 2, 4, 6, 9, 13, 18, 23, 29, 36, 44, 53, 63
-n  | α
-10 | 29
-11 | 36
-12 | 44
-13 | 53
-14 | 63
-15 | 74
-16 | 84
+0, 1, 2, 4, 6, 9, 13, 18, 23, 29, 36, 44, 53, 63<br>
+n  | α<br>
+10 | 29<br>
+11 | 36<br>
+12 | 44<br>
+13 | 53<br>
+14 | 63<br>
+15 | 74<br>
+16 | 84<br>
+
