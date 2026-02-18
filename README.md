@@ -33,3 +33,7 @@ n  | α<br>
 15 | 74<br>
 16 | 84<br>
 
+## Algorithm Explanation:
+1. SolverV2 - Updated Algorithm that only checks sets of form [1,2...α]
+2. SolverComplete - Algorithm that checks all sets of form [1,...α]
+
